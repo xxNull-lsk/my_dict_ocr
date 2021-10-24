@@ -6,7 +6,7 @@ import base64
 
 import zmq
 
-from src.paddle_ocr import get_english
+from paddle_ocr import get_english
 
 
 def ocr_get_english(data):
