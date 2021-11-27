@@ -1,6 +1,6 @@
 # OCR识别服务
 
-该服务为`我的词典`的OCR识别后端服务，可以实现英语、中文的OCR识别。
+该服务为[我的词典](https://github.com/xxNull-lsk/my_dict) 的OCR识别后端服务，可以实现英语、中文的OCR识别。
 ## 项目地址
 [https://github.com/xxNull-lsk/my_dict_ocr](https://github.com/xxNull-lsk/my_dict_ocr)
 
