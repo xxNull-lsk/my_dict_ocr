@@ -1,7 +1,10 @@
 from paddleocr import PaddleOCR
 
 
-ocr_eng = PaddleOCR(use_angle_cls=True, lang='en')
+# https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_server_v2.0_det_infer.tar
+# https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_mobile_v2.0_cls_infer.tar
+# https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_server_v2.0_rec_infer.tar
+ocr_ch_fast = None
 
 
 def get_rect(pos):
@@ -17,14 +20,25 @@ def get_rect(pos):
     return [x, y, x2 - x + 1, y2 - y + 1]
 
 
-def get_english(img):
+def ocr_get_text(img):
+    global ocr_ch_fast
+
+    if ocr_ch_fast is None:
+        ocr_ch_fast = PaddleOCR(
+            show_log=False,
+            use_angle_cls=True,
+            lang='ch',
+            det_model_dir="./model/ch_ppocr_server_v2.0_det_infer",
+            rec_model_dir="./model/ch_PP-OCRv2_rec_infer",
+            cls_model_dir="./model/ch_ppocr_mobile_v2.0_cls_infer"
+        )
     # Paddleocr supports Chinese, English, French, German, Korean and Japanese.
     # You can set the parameter `lang` as `ch`, `en`, `french`, `german`, `korean`, `japan`
     # to switch the language model in order.
-    result = ocr_eng.ocr(img, cls=True)
+    result = ocr_ch_fast.ocr(img)
     data = []
     for line in result:
-        print("line: ", line, '\n\n')
+        print("line: ", line)
         item = {
             "rect": get_rect(line[0]),
             "text": line[1][0],
