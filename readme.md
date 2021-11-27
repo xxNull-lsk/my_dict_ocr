@@ -11,7 +11,7 @@
 - 输入
 ```json
 {
-		"function": "/version"
+	"function": "/version"
 }
 ```
 
@@ -23,9 +23,9 @@
 - 输出
 ```json
 {
-		"code": 0,
-		"message": "succeed",
-		"version":  "xxx"
+    "code": 0,
+    "message": "succeed",
+    "version":  "xxx"
 }
 ```
 
@@ -44,7 +44,7 @@
 - 输入
 ```json
 {
-		"function": "/tick"
+	"function": "/tick"
 }
 ```
 
@@ -56,8 +56,8 @@
 - 输出
 ```json
 {
-		"code": 0,
-		"message": "succeed"
+    "code": 0,
+    "message": "succeed"
 }
 ```
 
@@ -75,8 +75,8 @@
 - 输入
 ```json
 {
-		"function": "/ocr/get_text",
-		"image": "......"
+    "function": "/ocr/get_text",
+    "image": "......"
 }
 ```
 
@@ -89,15 +89,15 @@
 - 输出
 ```json
 {
-		"code": 0,
-		"message": "succeed",
-		"data": [
-				{
-						"rect": [x, y, width, height],
-						"text": "识别出来的文本",
-						"score": 0.99
-				}
-		]
+    "code": 0,
+    "message": "succeed",
+    "data": [
+        {
+            "rect": [x, y, width, height],
+            "text": "识别出来的文本",
+            "score": 0.99
+        }
+    ]
 }
 ```
 
