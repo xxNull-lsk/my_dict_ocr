@@ -7,6 +7,11 @@
 ## docker镜像下载地址
 [https://hub.docker.com/r/xxnull/my_dict_ocr](https://hub.docker.com/r/xxnull/my_dict_ocr)
 
+## 离线镜像下载
+[阿里云盘](https://www.aliyundrive.com/s/UeiT3bvffs1)  
+[百度网盘](https://pan.baidu.com/s/1jYhvQNSqF-ghJbeeA0MSuw)  
+    提取码:`ihbi`
+
 # 接口
 
 ## 获取版本号
