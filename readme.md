@@ -12,6 +12,29 @@
 [百度网盘](https://pan.baidu.com/s/1jYhvQNSqF-ghJbeeA0MSuw)  
     提取码:`ihbi`
 
+# 安装方法
+## 在线安装
+```bash
+# 安装docker
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+# 拉取镜像
+docker pull xxnull/my_dict_ocr:latest
+# 启动容器
+docker run -d -p 12126:12126 xxnull/my_dict_ocr:latest
+```
+
+## 离线安装
+```bash
+# 下载离线镜像
+# 加载镜像
+docker load -i xxnull.my_dict_ocr.latest.tar.gz
+# 启动容器
+docker run -d -p 12126:12126 xxnull/my_dict_ocr:latest
+```
+
+**注意：**
+`我的词典`启动时会自动拉起OCR服务，无需手动拉起。
+
 # 接口
 
 ## 获取版本号
