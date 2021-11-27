@@ -11,7 +11,7 @@
 - 输入
 ```json
 {
-	"function": "/version"
+  "function": "/version"
 }
 ```
 
@@ -44,7 +44,7 @@
 - 输入
 ```json
 {
-	"function": "/tick"
+  "function": "/tick"
 }
 ```
 
